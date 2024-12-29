@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #990012;
+            /* Replace with your desired color code */
+
+        }
+    </style>
+
+
+    <meta charset="UTF-8">
+    <title>RED WINE</title>
+
+
+
+</head>
+<div class="wine-bottle-image">
+    <img src="{{ url_for('static', filename='wine_bottle.png.png') }}" alt="Wine Bottle" align="right">
+</div></br></br></br></br>
+
+<center>
+
+
+    <body>
+        <div class="login">
+            <h1>Red Wine Quality</h1>
+
+
+
+            <!-- Main Input For Receiving Query to our ML -->
+            <form  action="{{ url_for('predict')}}" method="post">
+                <input type="text" name="fixed acidity" placeholder="fixed acidity" required="required" /><br>
+                <input type="text" name="volatile acidity" placeholder="volatile acidity" required="required" /><br>
+                <input type="text" name="citric acid" placeholder="citric acid" required="required" /><br>
+                <input type="text" name="residual sugar" placeholder="residual sugar" required="required" /><br>
+                <input type="text" name="chlorides" placeholder="chlorides" required="required" /><br>
+                <input type="text" name="free sulfur dioxide" placeholder="free sulfur dioxide"
+                    required="required" /><br>
+                <input type="text" name="total sulfur dioxide" placeholder="total sulfur dioxide"
+                    required="required" /><br>
+                <input type="text" name="density" placeholder="density" required="required" /><br>
+                <input type="text" name="pH" placeholder="pH" required="required" /><br>
+                <input type="text" name="sulphates" placeholder="sulphates" required="required" /><br><br><br>
+
+
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br><br>
+
+
+            </form>
+
+
+            <br>
+            <br>
+
+
+        </div>
+        {{prediction_text}}<br><br>
+
+        <h>1 indicates Good Quality with quality index ranging: 7-8</h><br>
+        <h>0 indicates Bad Quality with quality index ranging: 3-6</h>
+
+    </body>
+</center>
+
+</html>

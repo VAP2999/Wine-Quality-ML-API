@@ -28,7 +28,7 @@ The main goal of this project is to predict the quality of red wine based on 11 
    - Visualized correlations and relationships between features.
    - Used heatmaps to explore feature importance.
 
-3. **Model Training**: 
+3. **Model Training**:
    - Trained three different machine learning models: AdaBoost, Gradient Boosting, and XGBoost.
    - Evaluated the models based on accuracy and other classification metrics.
 
